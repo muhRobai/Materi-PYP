@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/home/home.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="container">
+            <div class="layer-1">
+                <div class="colomn">
+                    <div class="right-content">
+                            <img class="logo" src="../assets/image/Frame.svg" alt="logo" />
+                        <div class="form">
+                            <form class="form-data">
+                                <div class="form-value">
+                                    <label 
+                                        for="label-name" 
+                                        class="label">
+                                        Fullname:
+                                    </label><br>
+                                    <input 
+                                        placeholder="Insert your name here ..."
+                                        class="form-input"
+                                        type="text"     
+                                        id="label-name" 
+                                        name="name"
+                                    ><br>
+                                </div>
+                                <div class="form-value">
+                                    <label 
+                                    for="label-email" 
+                                    class="label">
+                                    Email:
+                                    </label><br>
+                                    <input 
+                                        placeholder="Insert your email here ..."
+                                        class="form-input"
+                                        type="email" 
+                                        id="label-email" 
+                                        name="email"
+                                    ><br/>
+                                </div>
+                                <div class="form-value">
+                                    <label 
+                                    for="label-mobile-number" 
+                                    class="label">
+                                    Mobile Number:
+                                    </label><br>
+                                    <input 
+                                        class="form-input"
+                                        type="number" 
+                                        id="label-mobile-number" 
+                                        name="mobile-number"
+                                    ><br/>
+                                </div>
+                                <div class="form-footer">
+                                    <div class="content-footer"></div>
+                                    <div class="content-center">
+                                        <input 
+                                            type="submit" 
+                                            value="Registern"
+                                            class="btn"
+                                        />
+                                        <p class="text-footer">Or</p>
+                                        <div class="logo-google">
+                                            <a href="" >
+                                                <img 
+                                                    src="../assets/image/google.png" 
+                                                    alt="google-image"/>
+                                                Login With Google
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="content-footer"></div>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="colomn">
+                    <div class="left-content">
+                       <div class="image-content">
+                            <div class="imageSlide fade">
+                                <img
+                                    class="images" 
+                                    src="../assets/image/images.jpeg" 
+                                    alt="image"
+                                    onclick="plusSlides(-1)"
+                                />
+                                <div class="image-text">ARKADEMY BATCH 10</div>
+                            </div>
+                            <div class="imageSlide fade">
+                                <img
+                                    class="images" 
+                                    src="../assets/image/images.jpeg" 
+                                    alt="image"
+                                    onclick="plusSlides(-1)"
+                                />
+                                <div class="image-text">ARKADEMY BATCH 11</div>
+                            </div>
+                            <div class="imageSlide fade">
+                                <img
+                                    class="images" 
+                                    src="../assets/image/images.jpeg" 
+                                    alt="image"
+                                    onclick="plusSlides(-1)"
+                                />
+                                <div class="image-text">ARKADEMY BATCH 12</div>
+                            </div>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("imageSlide");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+    </body>
+</html>
