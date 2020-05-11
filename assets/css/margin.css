@@ -1,0 +1,22 @@
+body {
+    background-color: #000839;
+}
+
+div {
+    background-color: #ffa41b;
+    width: 100px;
+    height: 100px;
+}
+
+.margin {
+    margin: 20px;
+}
+
+.padding {
+    padding: 25px;
+}
+
+.full {
+    margin: 20px;
+    padding: 25px;
+}
